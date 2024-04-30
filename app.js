@@ -1,5 +1,5 @@
 function alertButton() {
-    alert("Phroogo")
     createElement('phroogo')
+    alert("Phroogo" + 'phroogo')
     appendChild('phroogo')
 }
