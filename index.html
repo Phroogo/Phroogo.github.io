@@ -14,6 +14,16 @@
 
     <center><button onClick="alertButton()">Click for Phroogo</button></center>
 
+    <button id="show-image-button">Show Image</button>
+   <img id="my-image" src="phroogo" style="display: none;">
+   <script>
+      const showImageButton = document.getElementById("show-image-button");
+      const myImage = document.getElementById("my-image"); 
+      showImageButton.addEventListener("click", () => { 
+         myImage.style.display = "block"; 
+      });
+   </script>
+    
     <center><img src="phroogo" alt="" /></center>
     
     <center>
