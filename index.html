@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="app.css" />
 </head>
 
-<body style="background-color:aquamarine;">
+<body>
 
     <center><h1>Phroogo</h1></center>
 
@@ -19,22 +19,22 @@
 
             switch (x) {
                 case 1:
-                    frog = "blue_phroogo";
+                    frog = "blue_phroogo.jpg";
                     break;
                 case 2:
-                    frog = "white_phroogo";
+                    frog = "white_phroogo.jpg";
                     break;
                 case 3:
-                    frog = "green_phroogo";
+                    frog = "green_phroogo.jpg";
                     break;
                 case 4:
-                    frog = "purple_phroogo";
+                    frog = "purple_phroogo.jpg";
                     break;
                 case 5:
-                    frog = "pet_phroogo";
+                    frog = "pet_phroogo.jpg";
                     break;
                 default:
-                    frog = "blue_phroogo";
+                    frog = "blue_phroogo.jpg";
                     break;
             }
             return frog;
@@ -44,11 +44,12 @@
         const myImage = document.getElementById("my-image");
 
         showImageButton.addEventListener("click", () => {
-            
             const frog = myFrog(); 
             myImage.src = frog; 
-           
-            myImage.style.display = "block";
+            myImage.style.display = "block"; // Make the image visible
+
+            // Add the 'show' class to start the jump animation
+            myImage.classList.add("show");
 
             alert("Phroogo");
         });
