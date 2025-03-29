@@ -17,8 +17,8 @@ h1 {
     height: 227px;
     cursor: pointer;
     border-radius: 10px; /* Optional: for rounded corners */
-    position: relative; /* Make the position relative to the normal flow */
-    top: 50px; /* Move the image 50px down from its normal position */
+    position: relative; /* Ensure position relative to its normal flow */
+    top: 50px; /* Moves the image down by 50px */
 }
 
 /* Bounce effect when the user hovers over the frog image */
