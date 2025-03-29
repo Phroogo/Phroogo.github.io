@@ -44,14 +44,12 @@
         const myImage = document.getElementById("my-image");
 
         showImageButton.addEventListener("click", () => {
-            // Get a random frog and set the image src
+            
             const frog = myFrog(); 
-            myImage.src = frog; // Set the image source
-
-            // Display the image
+            myImage.src = frog; 
+           
             myImage.style.display = "block";
 
-            // Show an alert
             alert("Phroogo");
         });
     </script>
