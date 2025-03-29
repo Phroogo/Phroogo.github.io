@@ -17,6 +17,7 @@ h1 {
     height: 227px;
     cursor: pointer;
     border-radius: 10px; /* Optional: for rounded corners */
+    margin-top: 50px; /* Add space above the image to move it down */
 }
 
 /* Bounce effect when the user hovers over the frog image */
