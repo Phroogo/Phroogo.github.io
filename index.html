@@ -40,6 +40,13 @@
             }
             return frog;
         }
+        function updateFavicon(frog) {
+            const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
+            favicon.type = "image/png";  // Assuming it's a PNG image
+            favicon.rel = "icon";
+            favicon.href = frog;  // Assuming the frog images are PNG files
+            document.head.appendChild(favicon);
+        }
 
         const showImageButton = document.getElementById("show-image-button");
         const myImage = document.getElementById("my-image");
@@ -49,6 +56,8 @@
             myImage.src = frog; // Set the image source without .jpg extension
             myImage.style.display = "block"; // Make the image visible
 
+            updateFavicon(frog);
+            
             alert("Phroogo");
         });
     </script>
