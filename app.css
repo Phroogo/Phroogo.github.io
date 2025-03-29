@@ -13,8 +13,8 @@ h1 {
 
 #my-image {
     transition: transform 0.3s ease-in-out;
-    width: 269px;
-    height: 227px;
+    width: 538px;
+    height: 454px;
     cursor: pointer;
     border-radius: 10px; /* Optional: for rounded corners */
     position: relative; /* Ensure position relative to its normal flow */
