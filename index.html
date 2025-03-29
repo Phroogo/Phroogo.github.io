@@ -12,15 +12,9 @@
 
     <center><h1>Phroogo</h1></center>
 
-    <!-- <center><button onClick="alertButton()">Click for Phroogo</button></center> 
-   -->
-
-    
-    <p id="demo"></p>
-
     <center><button id="show-image-button">Click for Phroogo</button></center>
     <center><img id="my-image" src=myFrog() style="display: none;"></center>
-    
+   
     <script>
         
     function myFrog() {
@@ -50,12 +44,12 @@
         }
         return frog;
 }
+        document.getElementById("frog").src = frog;
         const showImageButton = document.getElementById("show-image-button");
         const myImage = document.getElementById("my-image"); 
         showImageButton.addEventListener("click", () => { 
         myImage.style.display = "block";
-        onClick = alert("Phroogo");
-        document.getElementById("demo").innerHTML = "Today is " + myFrog();    
+        onClick = alert("Phroogo");    
         });
     </script>
 
