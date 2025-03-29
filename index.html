@@ -2,54 +2,57 @@
 <html>
 
 <head>
-    
-    <link rel="stylesheet" href="app.css"/>
-
+    <link rel="stylesheet" href="app.css" />
 </head>
-
 
 <body style="background-color:aquamarine;">
 
     <center><h1>Phroogo</h1></center>
 
     <center><button id="show-image-button">Click for Phroogo</button></center>
-    <center><img id="my-image" src=myFrog() style="display: none;"></center>
-   
+    <center><img id="my-image" src="" style="display: none;"></center>
+
     <script>
-        
-    function myFrog() {
- 	    let frog;
-    
-        let x = Math.floor(Math.random() * 5) + 1;
-    
-        switch (x) {
-        case 1:
-            frog = "blue_phroogo";
-                break;
-        case 2:
-            frog = "white_phroogo";
-                break;
-        case 3:
-            frog = "green_phroogo";
-                break;
-        case 4:
-            frog = "purple_phroogo";
-                break;
-        case 5:
-            frog = "pet_phroogo";
-                break;
-        default:
-            frog = "blue_phroogo";
-                break;
+        function myFrog() {
+            let frog;
+            let x = Math.floor(Math.random() * 5) + 1;
+
+            switch (x) {
+                case 1:
+                    frog = "blue_phroogo.jpg";
+                    break;
+                case 2:
+                    frog = "white_phroogo.jpg";
+                    break;
+                case 3:
+                    frog = "green_phroogo.jpg";
+                    break;
+                case 4:
+                    frog = "purple_phroogo.jpg";
+                    break;
+                case 5:
+                    frog = "pet_phroogo.jpg";
+                    break;
+                default:
+                    frog = "blue_phroogo.jpg";
+                    break;
+            }
+            return frog;
         }
-        return frog;
-}
-        document.getElementById("frog").src = frog;
+
         const showImageButton = document.getElementById("show-image-button");
-        const myImage = document.getElementById("my-image"); 
-        showImageButton.addEventListener("click", () => { 
-        myImage.style.display = "block";
-        onClick = alert("Phroogo");    
+        const myImage = document.getElementById("my-image");
+
+        showImageButton.addEventListener("click", () => {
+            // Get a random frog and set the image src
+            const frog = myFrog(); 
+            myImage.src = frog; // Set the image source
+
+            // Display the image
+            myImage.style.display = "block";
+
+            // Show an alert
+            alert("Phroogo");
         });
     </script>
 
