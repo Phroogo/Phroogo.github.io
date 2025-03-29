@@ -14,7 +14,13 @@
 
     <!-- <center><button onClick="alertButton()">Click for Phroogo</button></center> 
    -->
-   <script>
+
+    
+    <center><button id="show-image-button">Click for Phroogo</button></center>
+    <center><img id="my-image" src=Frog style="display: none;"></center>
+    
+    <script>
+        
     let Frog;
     
     let x = 1;
@@ -39,12 +45,6 @@
         Frog = "blue_phroogo";
             break;
     }
-   </script>
-    
-    <center><button id="show-image-button">Click for Phroogo</button></center>
-    <center><img id="my-image" src=Frog style="display: none;"></center>
-    
-    <script>
         const showImageButton = document.getElementById("show-image-button");
         const myImage = document.getElementById("my-image"); 
         showImageButton.addEventListener("click", () => { 
