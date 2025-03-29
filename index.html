@@ -19,22 +19,22 @@
 
             switch (x) {
                 case 1:
-                    frog = "blue_phroogo";
+                    frog = "blue_phroogo";  // Image name without .jpg extension
                     break;
                 case 2:
-                    frog = "white_phroogo";
+                    frog = "white_phroogo"; // Image name without .jpg extension
                     break;
                 case 3:
-                    frog = "green_phroogo";
+                    frog = "green_phroogo"; // Image name without .jpg extension
                     break;
                 case 4:
-                    frog = "purple_phroogo";
+                    frog = "purple_phroogo"; // Image name without .jpg extension
                     break;
                 case 5:
-                    frog = "pet_phroogo";
+                    frog = "pet_phroogo"; // Image name without .jpg extension
                     break;
                 default:
-                    frog = "blue_phroogo";
+                    frog = "blue_phroogo";  // Default image name without .jpg extension
                     break;
             }
             return frog;
@@ -44,11 +44,9 @@
         const myImage = document.getElementById("my-image");
 
         showImageButton.addEventListener("click", () => {
-            const frog = myFrog(); 
-            myImage.src = frog; 
+            const frog = myFrog();
+            myImage.src = frog; // Set the image source without .jpg extension
             myImage.style.display = "block"; // Make the image visible
-
-            
 
             alert("Phroogo");
         });
