@@ -23,8 +23,13 @@ body {
 
 #my-image {
     transition: transform 0.3s ease-in-out;
-    width: 538px;
-    height: 454px;
+    
+    margin-top: 20px;
+    width: auto;  /* Maintain original width */
+    height: auto; /* Maintain original height */
+    max-width: 538px; /* Ensure it doesn't scale too large */
+    max-height: 454px; /* Keep original height */
+    display: none;
     cursor: pointer;
     border-radius: 10px; /* Optional: for rounded corners */
     position: relative; /* Ensure position relative to its normal flow */
