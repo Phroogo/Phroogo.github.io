@@ -93,9 +93,11 @@ button:hover {
 }
 #gallery-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
+    flex-wrap: wrap; /* Allow images to wrap to a new row */
+    justify-content: center; /* Center images */
     gap: 10px; /* Space between images */
-    margin-top: 20px;
+    max-width: 1100px; /* Adjust to control when wrapping happens */
+    margin: 20px auto; /* Center the container */
 }
 
 /* Style for the Phroog images */
