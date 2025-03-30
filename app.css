@@ -97,7 +97,7 @@ button:hover {
     flex-wrap: wrap; /* Allow images to wrap onto new rows */
     justify-content: center; /* Center images */
     gap: 10px; /* Space between images */
-    max-width: 1100px; /* Controls when images wrap to a new row */
+    max-width: 1700px; /* Controls when images wrap to a new row */
     margin: 20px auto; /* Center container horizontally */
 }
 
