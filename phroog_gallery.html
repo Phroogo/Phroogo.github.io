@@ -3,21 +3,32 @@
 
 <head>
     <link rel="stylesheet" href="app.css" />
-    <link rel="icon" href="blue_phroogo" type="image/png" />
+    <link rel="icon" href="blue_phroogo.png" type="image/png" />
 </head>
 
 <body>
 
     <center><h1>Phroog Gallery</h1></center>
 
-    <center><img id="my-image" src="" style="display: none;"></center>
+    <div id="gallery-container"></div> <!-- Container for the images -->
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const galleryContainer = document.getElementById("gallery-container");
 
+            // Ordered list of Phroog images
+            let frogs = ["blue_phroogo", "purple_phroogo", "green_phroogo", "white_phroogo", "pet_phroogo"];
+
+            // Display each Phroog in order
+            frogs.forEach(frog => {
+                let img = document.createElement("img");
+                img.src = frog; // Assuming .png extension
+                img.classList.add("gallery-image"); // Apply styles
+                galleryContainer.appendChild(img);
+            });
+        });
     </script>
 
 </body>
-
-<script src="app.js"></script>
 
 </html>
