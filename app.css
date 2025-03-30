@@ -10,21 +10,14 @@ html, body {
 }
 
 h1 {
-    position: fixed;
-    top: 20px; /* Keeps it at the top */
-    left: 50%;
-    transform: translateX(-50%);
     font-family: 'Comic Sans MS', sans-serif;
     font-size: 4rem;
     color: #333;
-    white-space: nowrap; /* Prevents the title from breaking */
+    margin-top: 20px; /* Provides space from the top */
+    margin-bottom: 20px; /* Adds space below to separate from button */
 }
 
 button {
-    position: fixed;
-    top: 100px; /* Places the button right below the title */
-    left: 50%;
-    transform: translateX(-50%);
     padding: 10px 15px;
     font-size: 16px;
     background-color: #007bff;
@@ -33,25 +26,24 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Adds space below to separate from image */
 }
 body {
-    background-color: #add8e6; /* Light blue background */
-    font-family: Arial, sans-serif; /* Use a default font for the body */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+    justify-content: flex-start; /* Ensures items are stacked naturally */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    background-color: #add8e6;
 }
-
 #my-image {
-    margin-top: 150px;
-    transition: transform 0.3s ease-in-out;
-    
-    width: 538px; /* 269 * 2 */
-    height: 454px; /* 227 * 2 */
-    
-    display: none; /* Initially hidden */
+    width: 538px;
+    height: 454px;
+    display: none;
     cursor: pointer;
-    border-radius: 10px; /* Optional: Rounded corners */
-    
-    position: relative;
-    top: 50px; /* Moves the image down */
+    border-radius: 10px;
 }
 button:hover {
     background-color: #0056b3;
