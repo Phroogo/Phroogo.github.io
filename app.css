@@ -95,7 +95,7 @@ button:hover {
 #gallery-container {
     display: flex;
     flex-wrap: wrap; /* Allow images to wrap onto new rows */
-    justify-content: center; /* Center images */
+    justify-content: center; /* Align images */
     gap: 10px; /* Space between images */
     max-width: 2200px; /* Adjusted width to fit 4 images per row */
     margin: 20px auto; /* Center container horizontally */
@@ -103,13 +103,15 @@ button:hover {
 
 /* Style for the Phroog images */
 .gallery-image {
-    width: 538px;
+    width: 100%; /* Responsive width */
+    max-width: 538px; /* Ensure it doesn’t stretch */
     height: 454px;
     border-radius: 10px; /* Optional: Rounded corners */
     transition: transform 0.3s ease-in-out;
+    flex-basis: calc(25% - 10px); /* Ensures 4 images per row */
 }
 
-/* Center last row if it has fewer than 4 images */
+/* Ensure the last row is centered */
 #gallery-container img:nth-child(n+5) {
     flex-grow: 1;
     justify-content: center;
