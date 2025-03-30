@@ -25,10 +25,10 @@ body {
     transition: transform 0.3s ease-in-out;
     
     margin-top: 20px;
-    width: auto;  /* Maintain original width */
-    height: auto; /* Maintain original height */
-    max-width: 538px; /* Ensure it doesn't scale too large */
-    max-height: 454px; /* Keep original height */
+    width: 269px;
+    height: 227px;
+    transform: scale(2); /* Doubles the size */
+    transform-origin: top left; /* Ensures it scales properly */
     display: none;
     cursor: pointer;
     border-radius: 10px; /* Optional: for rounded corners */
