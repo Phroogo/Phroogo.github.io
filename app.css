@@ -39,10 +39,10 @@ body {
 }
 button {
     position: fixed;
-    top: 100px; /* Sticks it below the title */
+    top: 100px; /* Moves the button further down */
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 0; /* Remove margin to prevent shifting */
+    margin-top: 20px; /* Extra spacing for safety */
     padding: 10px 15px;
     font-size: 16px;
     background-color: #007bff;
