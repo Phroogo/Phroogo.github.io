@@ -97,7 +97,7 @@ button:hover {
     flex-wrap: wrap; /* Allow images to wrap onto new rows */
     justify-content: center; /* Center images */
     gap: 10px; /* Space between images */
-    max-width: 1700px; /* Controls when images wrap to a new row */
+    max-width: 2200px; /* Adjusted width to fit 4 images per row */
     margin: 20px auto; /* Center container horizontally */
 }
 
@@ -107,6 +107,12 @@ button:hover {
     height: 454px;
     border-radius: 10px; /* Optional: Rounded corners */
     transition: transform 0.3s ease-in-out;
+}
+
+/* Center last row if it has fewer than 4 images */
+#gallery-container img:nth-child(n+5) {
+    flex-grow: 1;
+    justify-content: center;
 }
 
 /* Bounce effect when hovering */
