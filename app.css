@@ -34,9 +34,6 @@ body {
     border-radius: 10px; /* Optional: for rounded corners */
     position: relative; /* Ensure position relative to its normal flow */
     top: 50px; /* Moves the image down by 50px */
-    margin-top: 20px;
-    max-width: 300px;
-    display: none;
 }
 
 button {
