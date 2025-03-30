@@ -24,10 +24,8 @@ body {
 #my-image {
     transition: transform 0.3s ease-in-out;
     
-    width: auto;  /* Keep original aspect ratio */
-    height: auto; /* Keep original aspect ratio */
-    max-width: 538px; /* 269 * 2 */
-    max-height: 454px; /* 227 * 2 */
+    width: 538px; /* 269 * 2 */
+    height: 454px; /* 227 * 2 */
     
     display: none; /* Initially hidden */
     cursor: pointer;
