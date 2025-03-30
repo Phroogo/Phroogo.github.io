@@ -91,20 +91,21 @@ button:hover {
     background-color: #0056b3;
     transform: scale(1.1);
 }
+/* Style for the gallery container */
 #gallery-container {
     display: flex;
-    flex-wrap: wrap; /* Allow images to wrap to a new row */
+    flex-wrap: wrap; /* Allow images to wrap onto new rows */
     justify-content: center; /* Center images */
     gap: 10px; /* Space between images */
-    max-width: 1100px; /* Adjust to control when wrapping happens */
-    margin: 20px auto; /* Center the container */
+    max-width: 1100px; /* Controls when images wrap to a new row */
+    margin: 20px auto; /* Center container horizontally */
 }
 
 /* Style for the Phroog images */
 .gallery-image {
     width: 538px;
     height: 454px;
-    border-radius: 10px; /* Optional: rounded corners */
+    border-radius: 10px; /* Optional: Rounded corners */
     transition: transform 0.3s ease-in-out;
 }
 
