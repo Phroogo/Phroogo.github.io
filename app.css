@@ -91,3 +91,22 @@ button:hover {
     background-color: #0056b3;
     transform: scale(1.1);
 }
+#gallery-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 10px; /* Space between images */
+    margin-top: 20px;
+}
+
+/* Style for the Phroog images */
+.gallery-image {
+    width: 538px;
+    height: 454px;
+    border-radius: 10px; /* Optional: rounded corners */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Bounce effect when hovering */
+.gallery-image:hover {
+    transform: scale(1.05);
+}
