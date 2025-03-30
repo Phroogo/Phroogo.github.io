@@ -62,3 +62,8 @@ h1 {
     background-color: #0056b3;
     transform: scale(1.1);
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures full height */
+}
