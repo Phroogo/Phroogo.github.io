@@ -11,12 +11,28 @@ html, body {
 
 h1 {
     position: fixed;
-    top: 20px; /* Sticks the title near the top */
+    top: 20px; /* Keeps it at the top */
     left: 50%;
-    transform: translateX(-50%); /* Centers it horizontally */
+    transform: translateX(-50%);
     font-family: 'Comic Sans MS', sans-serif;
     font-size: 4rem;
     color: #333;
+    white-space: nowrap; /* Prevents the title from breaking */
+}
+
+button {
+    position: fixed;
+    top: calc(20px + 4rem + 20px); /* Places the button right below the title */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 body {
     background-color: #add8e6; /* Light blue background */
@@ -37,23 +53,6 @@ body {
     position: relative;
     top: 50px; /* Moves the image down */
 }
-button {
-    position: fixed;
-    top: 100px; /* Moves the button further down */
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px; /* Extra spacing for safety */
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-
 button:hover {
     background-color: #0056b3;
 }
