@@ -10,10 +10,12 @@ html, body {
 }
 
 h1 {
-    text-align: center;
-    font-family: 'Comic Sans MS', sans-serif; /* Comic Sans font */
-    font-size: 4rem; /* Make the title a bit bigger */
-    text-align: center;
+    position: fixed;
+    top: 20px; /* Sticks the title near the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 4rem;
     color: #333;
 }
 body {
@@ -22,6 +24,7 @@ body {
 }
 
 #my-image {
+    margin-top: 150px;
     transition: transform 0.3s ease-in-out;
     
     width: 538px; /* 269 * 2 */
@@ -34,9 +37,12 @@ body {
     position: relative;
     top: 50px; /* Moves the image down */
 }
-
 button {
-    margin-top: 20px;
+    position: fixed;
+    top: 100px; /* Sticks it below the title */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0; /* Remove margin to prevent shifting */
     padding: 10px 15px;
     font-size: 16px;
     background-color: #007bff;
@@ -47,10 +53,10 @@ button {
     transition: background-color 0.3s ease;
 }
 
+
 button:hover {
     background-color: #0056b3;
 }
-
 /* Bounce effect when the user hovers over the frog image */
 #my-image:hover {
     animation: bounce 0.6s ease-in-out; /* Trigger the bounce animation */
