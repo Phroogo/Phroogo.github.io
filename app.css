@@ -46,19 +46,19 @@ h1 {
 }
 .bottom-left-link {
     position: fixed;
-    bottom: 20px; /* Distance from bottom */
-    left: 20px; /* Distance from left */
-    background-color: #007bff; /* Nice blue color */
-    color: white; /* White text */
-    padding: 10px 15px; /* Padding around text */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Removes underline */
-    font-family: Arial, sans-serif; /* Clean font */
-    font-weight: bold; /* Make text bold */
+    bottom: 20px; /* Ensures it's positioned from the bottom */
+    left: 20px; /* Keeps it on the left */
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .bottom-left-link:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    background-color: #0056b3;
+    transform: scale(1.1);
 }
