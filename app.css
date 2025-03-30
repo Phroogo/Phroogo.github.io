@@ -13,7 +13,7 @@ h1 {
     font-family: 'Comic Sans MS', sans-serif;
     font-size: 4rem;
     color: #333;
-    margin-bottom: 10px; /* Adds space between title and button */
+    margin-bottom: 20px; /* Ensures button stays below */
 }
 
 button {
@@ -25,13 +25,13 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 20px; /* Adds spacing between button and image */
+    margin-bottom: 20px; /* Adds space between button and image */
 }
 body {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers items horizontally */
-    justify-content: flex-start; /* Stacks elements from the top */
+    align-items: center;
+    justify-content: flex-start; /* Stack items from the top */
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -51,11 +51,9 @@ button:hover {
 #my-image:hover {
     animation: bounce 0.6s ease-in-out; /* Trigger the bounce animation */
 }
-.header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Keep them centered */
-    margin-top: 20px; /* Adds spacing from the top */
+.container {
+    text-align: center;
+    margin-top: 50px; /* Adds space from the top */
 }
 /* Define the bounce keyframes */
 @keyframes bounce {
