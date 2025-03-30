@@ -12,6 +12,9 @@
 
     <div id="gallery-container"></div> <!-- Container for the images -->
 
+    <!-- Back to Main Site Button -->
+    <a href="index.html" class="bottom-left-link">Back to Main Site</a>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const galleryContainer = document.getElementById("gallery-container");
@@ -22,7 +25,7 @@
             // Display each Phroog in order
             frogs.forEach(frog => {
                 let img = document.createElement("img");
-                img.src = frog; // Assuming .png extension
+                img.src = frog + ".png"; // Assuming .png extension
                 img.classList.add("gallery-image"); // Apply styles
                 galleryContainer.appendChild(img);
             });
