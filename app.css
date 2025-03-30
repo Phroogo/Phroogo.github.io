@@ -24,16 +24,17 @@ body {
 #my-image {
     transition: transform 0.3s ease-in-out;
     
-    margin-top: 20px;
-    width: 269px;
-    height: 227px;
-    transform: scale(2); /* Doubles the size */
-    transform-origin: top left; /* Ensures it scales properly */
-    display: none;
+    width: auto;  /* Keep original aspect ratio */
+    height: auto; /* Keep original aspect ratio */
+    max-width: 538px; /* 269 * 2 */
+    max-height: 454px; /* 227 * 2 */
+    
+    display: none; /* Initially hidden */
     cursor: pointer;
-    border-radius: 10px; /* Optional: for rounded corners */
-    position: relative; /* Ensure position relative to its normal flow */
-    top: 50px; /* Moves the image down by 50px */
+    border-radius: 10px; /* Optional: Rounded corners */
+    
+    position: relative;
+    top: 50px; /* Moves the image down */
 }
 
 button {
