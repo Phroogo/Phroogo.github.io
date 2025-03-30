@@ -3,49 +3,29 @@
 
 <head>
     <link rel="stylesheet" href="app.css" />
-    <link rel="icon" href="blue_phroogo" type="image/png" />
+    <link rel="icon" href="blue_phroogo.png" type="image/png" />
 </head>
 
 <body>
 
-    <center><h1>Phroogo</h1></center>
+    <h1>Phroogo</h1>
 
-    <center><button id="show-image-button">Click for Phroogo</button></center>
-    <center><img id="my-image" src="" style="display: none;"></center>
+    <button id="show-image-button">Click for Phroogo</button>
+    <img id="my-image" src="" alt="Phroogo Image">
+
     <a href="phroog_gallery.html" class="bottom-left-link">Phroog Gallery</a>
 
     <script>
         function myFrog() {
-            let frog;
-            let x = Math.floor(Math.random() * 5) + 1;
-
-            switch (x) {
-                case 1:
-                    frog = "blue_phroogo";  // Image name without .jpg extension
-                    break;
-                case 2:
-                    frog = "white_phroogo"; // Image name without .jpg extension
-                    break;
-                case 3:
-                    frog = "green_phroogo"; // Image name without .jpg extension
-                    break;
-                case 4:
-                    frog = "purple_phroogo"; // Image name without .jpg extension
-                    break;
-                case 5:
-                    frog = "pet_phroogo"; // Image name without .jpg extension
-                    break;
-                default:
-                    frog = "blue_phroogo";  // Default image name without .jpg extension
-                    break;
-            }
-            return frog;
+            let frogs = ["blue_phroogo", "white_phroogo", "green_phroogo", "purple_phroogo", "pet_phroogo"];
+            return frogs[Math.floor(Math.random() * frogs.length)];
         }
+
         function updateFavicon(frog) {
             const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
-            favicon.type = "image/png";  // Assuming it's a PNG image
+            favicon.type = "image/png";
             favicon.rel = "icon";
-            favicon.href = frog;  // Assuming the frog images are PNG files
+            favicon.href = frog + ".png";  // Assuming the images have a .png extension
             document.head.appendChild(favicon);
         }
 
@@ -54,17 +34,13 @@
 
         showImageButton.addEventListener("click", () => {
             const frog = myFrog();
-            myImage.src = frog; // Set the image source without .jpg extension
-            myImage.style.display = "block"; // Make the image visible
-
+            myImage.src = frog + ".png";  // Ensuring the correct file extension
+            myImage.style.display = "block";
             updateFavicon(frog);
-            
             alert("Phroogo");
         });
     </script>
 
 </body>
-
-<script src="app.js"></script>
 
 </html>
