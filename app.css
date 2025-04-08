@@ -73,16 +73,36 @@ html, body {
          transform: translateY(0); /* Final position */
      }
  }
-
+ .bottom-left-link {
+     position: fixed;
+     bottom: 20px;
+     left: 20px;
+     background-color: #007bff;
+     color: white;
+     padding: 10px 15px;
+     border-radius: 5px;
+     text-decoration: none;
+     font-family: Arial, sans-serif;
+     font-weight: bold;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+ 
+ .bottom-left-link:hover {
+     background-color: #0056b3;
+     transform: scale(1.1);
+ }
  /* Style for the gallery container */
-#gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 90vw;
-    margin: 40px auto;
-}
+ #gallery-container {
+     display: flex;
+     flex-wrap: wrap; /* Allow images to wrap onto new rows */
+     justify-content: center; /* Align images */
+     flex-wrap: wrap; /* Allow images to wrap when needed */
+     justify-content: center; /* Center images */
+     gap: 10px; /* Space between images */
+     max-width: 2200px; /* Adjusted width to fit 4 images per row */
+     max-width: 90vw; /* Max width as 90% of the viewport */
+     margin: 20px auto; /* Center container horizontally */
+ }
  
  /* Style for the Phroog images */
  .gallery-image {
@@ -111,77 +131,4 @@ html, body {
  /* Bounce effect when hovering */
  .gallery-image:hover {
      transform: scale(1.05);
- }
-
-.flip-card {
-    background-color: transparent;
-    width: 538px;
-    height: 454px;
-    perspective: 1000px;
-    /* Ensure perspective for 3D effect */
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;  /* Ensures 3D effect */
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Flips the card */
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;  /* Ensures the back side is hidden */
-    border-radius: 10px;
-}
-
-/* Style for the front side */
-.flip-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Style for the back side (text area) */
-.flip-card-back {
-    background-color: #fff;
-    transform: rotateY(180deg);  /* Initially rotated */
-    padding: 20px;
-    text-align: center;
-    font-family: 'Comic Sans MS', sans-serif;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flip-card-back p {
-    font-size: 1.2rem;
-    margin: 0;
-}
- .bottom-left-link {
-     position: fixed;
-     bottom: 20px;
-     left: 20px;
-     background-color: #007bff;
-     color: white;
-     padding: 10px 15px;
-     border-radius: 5px;
-     text-decoration: none;
-     font-family: Arial, sans-serif;
-     font-weight: bold;
-     transition: background-color 0.3s ease, transform 0.2s ease;
- }
- 
- .bottom-left-link:hover {
-     background-color: #0056b3;
-     transform: scale(1.1);
  }
