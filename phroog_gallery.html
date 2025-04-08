@@ -1,38 +1,58 @@
 <!DOCTYPE html>
- <html>
- 
- <head>
-     <link rel="stylesheet" href="app.css" />
-     <link rel="icon" href="blue_phroogo" type="image/png" />
- </head>
- 
- <body>
- 
-     <center><h1>Phroog Gallery</h1></center>
- 
-     <!-- Container for the images -->
-     <div id="gallery-container"></div>
- 
-     <!-- Back to Main Site Button -->
-     <a href="index.html" class="bottom-left-link">Back to The Randomizer!</a>
- 
-     <script>
-         document.addEventListener("DOMContentLoaded", () => {
-             const galleryContainer = document.getElementById("gallery-container");
- 
-             // Ordered list of Phroog images
-             let frogs = ["blue_phroogo", "purple_phroogo", "green_phroogo", "white_phroogo", "pet_phroogo"];
- 
-             // Display each Phroog in order
-             frogs.forEach(frog => {
-                 let img = document.createElement("img");
-                 img.src = frog; // Assuming .png extension
-                 img.classList.add("gallery-image"); // Apply styles
-                 galleryContainer.appendChild(img);
-             });
-         });
-     </script>
- 
- </body>
- 
- </html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="icon" href="blue_phroogo" type="image/png" />
+</head>
+
+<body>
+
+    <center><h1>Phroog Gallery</h1></center>
+
+    <!-- Container for the images -->
+    <div id="gallery-container"></div>
+
+    <!-- Back to Main Site Button -->
+    <a href="index.html" class="bottom-left-link">Back to The Randomizer!</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const galleryContainer = document.getElementById("gallery-container");
+
+            // Ordered list of Phroog images
+            let frogs = ["blue_phroogo", "purple_phroogo", "green_phroogo", "white_phroogo", "pet_phroogo"];
+            let descriptions = ["Blue Phroogo", "Purple Phroogo", "Green Phroogo", "White Phroogo", "Pet Phroogo"]; // Example descriptions
+
+            // Display each Phroog in order with flip card effect
+            frogs.forEach((frog, index) => {
+                let flipCard = document.createElement("div");
+                flipCard.classList.add("flip-card");
+
+                let flipCardInner = document.createElement("div");
+                flipCardInner.classList.add("flip-card-inner");
+
+                let flipCardFront = document.createElement("div");
+                flipCardFront.classList.add("flip-card-front");
+                let img = document.createElement("img");
+                img.src = frog + ".png"; // Assuming .png extension
+                flipCardFront.appendChild(img);
+
+                let flipCardBack = document.createElement("div");
+                flipCardBack.classList.add("flip-card-back");
+                let text = document.createElement("p");
+                text.innerText = descriptions[index]; // Display corresponding description
+                flipCardBack.appendChild(text);
+
+                flipCardInner.appendChild(flipCardFront);
+                flipCardInner.appendChild(flipCardBack);
+                flipCard.appendChild(flipCardInner);
+
+                galleryContainer.appendChild(flipCard);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
