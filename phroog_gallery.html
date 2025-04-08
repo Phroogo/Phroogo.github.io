@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="app.css" />
-    <link rel="icon" href="blue_phroogo" type="image/png" />
+    <link rel="icon" href="blue_phroogo.png" type="image/png" />
 </head>
 
 <body>
@@ -26,28 +26,36 @@
 
             // Display each Phroog in order with flip card effect
             frogs.forEach((frog, index) => {
+                // Create flip card container
                 let flipCard = document.createElement("div");
                 flipCard.classList.add("flip-card");
 
+                // Create flip card inner (for the flipping effect)
                 let flipCardInner = document.createElement("div");
                 flipCardInner.classList.add("flip-card-inner");
 
+                // Front side of the card
                 let flipCardFront = document.createElement("div");
                 flipCardFront.classList.add("flip-card-front");
                 let img = document.createElement("img");
-                img.src = frog; // Assuming .png extension
+                img.src = frog + ".png"; // Assuming .png extension for the image
                 flipCardFront.appendChild(img);
 
+                // Back side of the card (text area)
                 let flipCardBack = document.createElement("div");
                 flipCardBack.classList.add("flip-card-back");
                 let text = document.createElement("p");
                 text.innerText = descriptions[index]; // Display corresponding description
                 flipCardBack.appendChild(text);
 
+                // Append front and back to flip card inner
                 flipCardInner.appendChild(flipCardFront);
                 flipCardInner.appendChild(flipCardBack);
+
+                // Append flip card inner to the card container
                 flipCard.appendChild(flipCardInner);
 
+                // Append the flip card to the gallery container
                 galleryContainer.appendChild(flipCard);
             });
         });
