@@ -94,34 +94,21 @@ html, body {
  /* Style for the gallery container */
  #gallery-container {
      display: flex;
-     flex-wrap: wrap; /* Allow images to wrap onto new rows */
-     justify-content: center; /* Align images */
-     flex-wrap: wrap; /* Allow images to wrap when needed */
+       flex-wrap: wrap; /* Allow images to wrap when needed */
      justify-content: center; /* Center images */
      gap: 10px; /* Space between images */
-     max-width: 2200px; /* Adjusted width to fit 4 images per row */
      max-width: 90vw; /* Max width as 90% of the viewport */
      margin: 20px auto; /* Center container horizontally */
  }
  
  /* Style for the Phroog images */
  .gallery-image {
-     width: 100%; /* Responsive width */
-     max-width: 538px; /* Ensure it doesn’t stretch */
-     height: 454px;
-     width: 538px; /* Fixed width */
+       width: 538px; /* Fixed width */
      height: 454px; /* Fixed height */
      border-radius: 10px; /* Optional: Rounded corners */
      transition: transform 0.3s ease-in-out;
-     flex-basis: calc(25% - 10px); /* Ensures 4 images per row */
  }
- 
- /* Ensure the last row is centered */
- #gallery-container img:nth-child(n+5) {
-     flex-grow: 1;
-     justify-content: center;
- /* Ensure images wrap naturally */
- @media (max-width: 2200px) {
+@media (max-width: 2200px) {
      #gallery-container {
          max-width: 100%; /* Allow full width usage */
          padding: 0 20px; /* Some breathing space */
