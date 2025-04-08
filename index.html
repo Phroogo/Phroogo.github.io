@@ -4,7 +4,6 @@
  <head>
      <link id="favicon" rel="icon" href="blue_phroogo" type="image/png" />
      <link rel="stylesheet" href="app.css" />
-     <link rel="icon" href="blue_phroogo.png" type="image/png" />
  </head>
  
  <body>
@@ -20,22 +19,11 @@
  
  
      <script>
-         function myFrog() {
-             let frogs = ["blue_phroogo", "white_phroogo", "green_phroogo", "purple_phroogo", "pet_phroogo"];
-             return frogs[Math.floor(Math.random() * frogs.length)];
-         function updateFavicon(frog) {
+      function updateFavicon(frog) {
          const favicon = document.getElementById("favicon");
          favicon.href = frog; // Ensure correct file extension
          }
- 
-         function updateFavicon(frog) {
-             const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
-             favicon.type = "image/png";
-             favicon.rel = "icon";
-             favicon.href = frog;  // Assuming the images have a .png extension
-             document.head.appendChild(favicon);
-                                         // Set default favicon on page load
-         document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
          updateFavicon("blue_phroogo"); // Default to blue_phroogo.png
          });
  
@@ -49,11 +37,6 @@
          const myImage = document.getElementById("my-image");
  
          showImageButton.addEventListener("click", () => {
-             const frog = myFrog();
-             myImage.src = frog;  // Ensuring the correct file extension
-             myImage.style.display = "block";
-             updateFavicon(frog);
-             alert("Phroogo");
          const frog = myFrog();
          myImage.src = frog;  // Ensuring the correct file extension
          myImage.style.display = "block";
