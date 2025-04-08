@@ -94,11 +94,11 @@ button:hover {
 /* Style for the gallery container */
 #gallery-container {
     display: flex;
-    flex-wrap: wrap; /* Allow images to wrap when needed */
-    justify-content: center; /* Center images */
-    gap: 10px; /* Space between images */
-    max-width: 90vw; /* Max width as 90% of the viewport */
-    margin: 20px auto; /* Center container horizontally */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 90vw;
+    margin: 40px auto;
 }
 
 /* Style for the Phroog images */
@@ -124,8 +124,8 @@ button:hover {
 
 .flip-card {
     background-color: transparent;
-    width: 538px;
-    height: 454px;
+    width: 300px;
+    height: 300px;
     perspective: 1000px;
 }
 
@@ -149,6 +149,7 @@ button:hover {
     border-radius: 10px;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -161,11 +162,10 @@ button:hover {
 }
 
 .flip-card-back {
-    background-color: #fff;
-    color: #333;
+    background-color: white;
     transform: rotateY(180deg);
-    flex-direction: column;
-    text-align: center;
     padding: 20px;
+    text-align: center;
     font-family: 'Comic Sans MS', sans-serif;
+    color: #333;
 }
