@@ -19,12 +19,11 @@
  
  
      <script>
-       function updateFavicon(frog) {
+         function updateFavicon(frog) {
          const favicon = document.getElementById("favicon");
          favicon.href = frog; // Ensure correct file extension
-         }
-       
-      document.addEventListener("DOMContentLoaded", () => {
+         
+         document.addEventListener("DOMContentLoaded", () => {
          updateFavicon("blue_phroogo"); // Default to blue_phroogo.png
          });
  
@@ -45,7 +44,7 @@
          alert("Phroogo");
          });
      </script>
-     
+ 
  </body>
  
  </html>
