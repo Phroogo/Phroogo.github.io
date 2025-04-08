@@ -1,52 +1,39 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" href="app.css" />
-    <link rel="icon" href="blue_phroogo" type="image/png" />
-</head>
-
-<body>
-
-    <center><h1>Phroog Gallery</h1></center>
-
-    <!-- Container for the images -->
-    <div id="gallery-container"></div>
-
-    <!-- Back to Main Site Button -->
-    <a href="index.html" class="bottom-left-link">Back to The Randomizer!</a>
-
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const galleryContainer = document.getElementById("gallery-container");
-
-    const frogs = [
-        { name: "blue_phroogo", label: "BLUE", info: "This phrog is chill and cool." },
-        { name: "purple_phroogo", label: "PURPLE", info: "This phrog loves fruits." },
-        { name: "green_phroogo", label: "GREEN", info: "This phrog is the nature king." },
-        { name: "white_phroogo", label: "WHITE", info: "This phrog is classy and clean." },
-        { name: "pet_phroogo", label: "PET", info: "This one is pettable!" }
-    ];
-
-    frogs.forEach(({ name, label, info }) => {
-        const card = document.createElement("div");
-        card.className = "flip-card";
-        card.innerHTML = `
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="${name}" alt="${label}" />
-                </div>
-                <div class="flip-card-back">
-                    <h2>${label}</h2>
-                    <p>${info}</p>
-                </div>
-            </div>
-        `;
-        galleryContainer.appendChild(card);
-    });
-});
-</script>
-
-</body>
-
-</html>
+ <html>
+ 
+ <head>
+     <link rel="stylesheet" href="app.css" />
+     <link rel="icon" href="blue_phroogo" type="image/png" />
+ </head>
+ 
+ <body>
+ 
+     <center><h1>Phroog Gallery</h1></center>
+ 
+     <div id="gallery-container"></div> <!-- Container for the images -->
+     <!-- Container for the images -->
+     <div id="gallery-container"></div>
+ 
+     <!-- Back to Main Site Button -->
+     <a href="index.html" class="bottom-left-link">Back to The Randomizer!</a>
+ 
+     <script>
+         document.addEventListener("DOMContentLoaded", () => {
+             const galleryContainer = document.getElementById("gallery-container");
+ 
+             // Ordered list of Phroog images
+             let frogs = ["blue_phroogo", "purple_phroogo", "green_phroogo", "white_phroogo", "pet_phroogo"];
+ 
+             // Display each Phroog in order
+             frogs.forEach(frog => {
+                 let img = document.createElement("img");
+                 img.src = frog; // Assuming .png extension
+                 img.classList.add("gallery-image"); // Apply styles
+                 galleryContainer.appendChild(img);
+             });
+         });
+     </script>
+ 
+ </body>
+ 
+ </html>
