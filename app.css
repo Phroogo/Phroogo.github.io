@@ -119,7 +119,7 @@ button:hover {
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Flips the card */
+    transform: rotateY(1800deg); /* Flips the card */
 }
 
 .flip-card-front,
@@ -142,7 +142,7 @@ button:hover {
 /* Style for the back side (text area) */
 .flip-card-back {
     background-color: #ade0e6;
-    transform: rotateY(180deg);  /* Initially rotated */
+    transform: rotateY(1800deg);  /* Initially rotated */
     padding: 20px;
     text-align: center;
     font-family: 'Comic Sans MS', sans-serif;
