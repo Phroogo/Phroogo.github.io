@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link id="favicon" rel="icon" href="sjuul" type="image/png" />
+    <link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Is Sjuul available today?</h1>
+        <button id="show-image-button">Yes</button> <button id="show-image-button">No</button>
+    </div>
+
+    <script>
+        function updateFavicon(frog) {
+        const favicon = document.getElementById("favicon");
+        favicon.href = frog; // Ensure correct file extension
+        }
+
+                                        // Set default favicon on page load
+        document.addEventListener("DOMContentLoaded", () => {
+        updateFavicon("blue_phroogo"); // Default to blue_phroogo.png
+        });
+
+// Function to choose a random frog
+        function myFrog() {
+        let frogs = ["blue_phroogo", "white_phroogo", "green_phroogo", "purple_phroogo", "pet_phroogo"];
+        return frogs[Math.floor(Math.random() * frogs.length)];
+        }
+
+        const showImageButton = document.getElementById("show-image-button");
+        const myImage = document.getElementById("my-image");
+
+        showImageButton.addEventListener("click", () => {
+        const frog = myFrog();
+        myImage.src = frog;  // Ensuring the correct file extension
+        myImage.style.display = "block";
+        updateFavicon(frog);
+        alert("Phroogo");
+        });
+    </script>
+
+</body>
+
+</html>
