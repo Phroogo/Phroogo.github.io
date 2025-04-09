@@ -10,10 +10,11 @@
     
     <div class="container">
         <h1>Is Sjuul available today?</h1>
-        <button id="yes-sjuul-button">Yes</button> &nbsp&nbsp&nbsp&nbsp <button id="no-sjuul-button">No</button>
+        <button id="yes-sjuul-button">Yes</button> &nbsp&nbsp&nbsp&nbsp
+        <button id="no-sjuul-button">No</button>
     </div>
 
-    <p id = "sjuul-string"></p>
+    <p id="sjuul-string" style="display: none;"></p>
     
     <script>                       
 
@@ -24,13 +25,11 @@
         yesSjuulButton.addEventListener("click", () => {
             sjuulString = "Yes Sjuul :D";
             sjuulString.style.display = "block";
-            alert("Yes Sjuul :D");
         });
 
         noSjuulButton.addEventListener("click", () => {
             sjuulString = "No Sjuul :c";
             sjuulString.style.display = "block";
-            alert("No Sjuul :c");
         });
     </script>
 
