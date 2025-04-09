@@ -15,20 +15,26 @@
     </div>
 
     <p id="sjuul-string" class="sjuul-text"></p>
+    <img id="sjuul-image" src="" alt="Phroogo Image">
 
     <script>
         const yesSjuulButton = document.getElementById("yes-sjuul-button");
         const noSjuulButton = document.getElementById("no-sjuul-button");
         const sjuulString = document.getElementById("sjuul-string");
+        const sjuulImage = document.getElemenetById("sjuul-image");
 
         yesSjuulButton.addEventListener("click", () => {
             sjuulString.textContent = "Yes Sjuul :D";
             sjuulString.style.display = "block";
+            sjuulImage.src = "blue_phroogo";
+            sjuulImage.style.display = "block";
         });
 
         noSjuulButton.addEventListener("click", () => {
             sjuulString.textContent = "No Sjuul :c";
             sjuulString.style.display = "block";
+            sjuulImage.src = "sad_phroogo";
+            sjuulImage.style.display = "block";
         });
     </script>
 
