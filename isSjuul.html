@@ -11,19 +11,23 @@
     <div class="container">
         <h1>Is Sjuul available today?</h1>
         <button id="yes-sjuul-button">Yes</button> <button id="no-sjuul-button">No</button>
+        <p id = "sjuul-String"></p>
     </div>
 
     <script>                       
 
         const yesSjuulButton = document.getElementById("yes-sjuul-button");
         const noSjuulButton = document.getElementById("no-sjuul-button");
+        const sjuulString = document.getElementById("sjuul-string");
         
         yesSjuulButton.addEventListener("click", () => {
-        alert("Yes Sjuul");
+            sjuulString = "Yes Sjuul :D";
+            sjuulString.style.display = "block";
         });
 
         noSjuulButton.addEventListener("click", () => {
-        alert("No Sjuul");
+            sjuulString = "No Sjuul :c";
+            sjuulString.style.display = "block";
         });
     </script>
 
