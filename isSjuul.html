@@ -4,31 +4,37 @@
 <head>
     <link id="favicon" rel="icon" href="sjuul" type="image/png" />
     <link rel="stylesheet" href="app.css" />
+    <style>
+        #sjuul-string {
+            display: none;
+            font-size: 2.2em;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
     
     <div class="container">
         <h1>Is Sjuul available today?</h1>
-        <button id="yes-sjuul-button">Yes</button> &nbsp&nbsp&nbsp&nbsp
+        <button id="yes-sjuul-button">Yes</button>
         <button id="no-sjuul-button">No</button>
     </div>
 
-    <p id="sjuul-string" style="display: none;"></p>
-    
-    <script>                       
+    <p id="sjuul-string"></p>
 
+    <script>
         const yesSjuulButton = document.getElementById("yes-sjuul-button");
         const noSjuulButton = document.getElementById("no-sjuul-button");
         const sjuulString = document.getElementById("sjuul-string");
-        
+
         yesSjuulButton.addEventListener("click", () => {
-            sjuulString = "Yes Sjuul :D";
+            sjuulString.textContent = "Yes Sjuul :D";
             sjuulString.style.display = "block";
         });
 
         noSjuulButton.addEventListener("click", () => {
-            sjuulString = "No Sjuul :c";
+            sjuulString.textContent = "No Sjuul :c";
             sjuulString.style.display = "block";
         });
     </script>
