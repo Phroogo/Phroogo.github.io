@@ -176,3 +176,9 @@ button:hover {
     font-size: 10em;
     margin-top: 100px;
 }
+#sjuul-image {
+    width: 538px;
+    height: 454px;
+    margin-top: 30px;
+    display: none;
+}
